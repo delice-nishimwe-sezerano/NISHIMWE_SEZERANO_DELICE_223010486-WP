@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>STUDENT REGISTRATION FORM</h1>
-    <form action="">
+    <form action="connect.php" method="POST">
         <label for="firstName">FIRST NAME</label>
         <input type="text" id="firstName" name="firstName" required><br><br>
         <label for="lastName">LAST NAME</label>
@@ -83,6 +83,10 @@
         <br>
         <label for="mobileNumber">MOBILE NUMBER</label>
         <input type="tel" id="mobileNumber" name="mobileNumber"><br><br>
+        <label for="gender">GENDER</label>
+        <input type="radio" id="gender_male" name="gender" value="male"> <label for="gender_male">Male</label>
+        <input type="radio" id="gender_female" name="gender" value="female"> <label for="gender_female">Female</label>
+        <br><br>
         <label for="address">ADDRESS</label>
         <textarea name="address" id="address"></textarea><br><br>
         <label for="city">CITY</label>
@@ -92,7 +96,17 @@
         <label for="state">STATE</label>
         <input type="text" id="state" name="state"><br><br>
         <label for="country">COUNTRY</label>
-        <input type="text" id="country" name="country" placeholder="india"><br><br>
+<select id="country" name="country" required>
+    <option value="">Select Country</option>
+    <option value="Rwanda">Rwanda</option>
+    <option value="Kenya">Kenya</option>
+    <option value="Uganda">Uganda</option>
+    <option value="Tanzania">Tanzania</option>
+    <option value="India">India</option>
+    <option value="USA">USA</option>
+    <option value="UK">United Kingdom</option>
+</select>
+<br><br>
         <label for="hobbies">HOBBIES</label>
         <label for="hobby1">Drawing</label>
         <input type="checkbox" id="hobby1" name="hobbies" value="drawing">
@@ -109,43 +123,44 @@
         <label for="qualifications">QUALIFICATIONS</label>
         <table>
             <tr>
-                <th>SI.No</th>
-                <th>EXAMINATION</th>
-                <th>Board</th>
-                <th>Percentage</th>
+                <th>SI.No.</th>
+                <th>Examination</th>
+                <th>Board<br><small>(10 char max)</small></th>
+                <th>Percentage<br><small>(upto 2 decimal)</small></th>
+                <th>Year of Passing</th>
             </tr>
             <tr>
                 <td>1</td>
-                <td><strong>Class x</strong></td>
+                <td><strong>Class X</strong></td>
                 <td><input type="text" name="board1" required></td>
-                <td><input type="text" name="yearOfPassing1"></td>
                 <td><input type="text" name="percentage1"></td>
+                <td><input type="text" name="yearOfPassing1"></td>
             </tr>
             <tr>
                 <td>2</td>
                 <td><strong>Class XII</strong></td>
                 <td><input type="text" name="board2" required></td>
-                <td><input type="text" name="yearOfPassing2" required></td>
                 <td><input type="text" name="percentage2"></td>
+                <td><input type="text" name="yearOfPassing2" required></td>
             </tr>
             <tr>
-             <td>3</td>
-             <td><strong>Graduation</strong></td>
+                <td>3</td>
+                <td><strong>Graduation</strong></td>
                 <td><input type="text" name="board3" required></td>
-                <td><input type="text" name="yearOfPassing3"></td>
                 <td><input type="text" name="percentage3"></td>
+                <td><input type="text" name="yearOfPassing3"></td>
             </tr>
             <tr>
-                <td>4</td>  
+                <td>4</td>
                 <td><strong>Masters</strong></td>
                 <td><input type="text" name="board4" required></td>
-                <td><input type="text" name="yearOfPassing4"></td>
                 <td><input type="text" name="percentage4"></td>
+                <td><input type="text" name="yearOfPassing4"></td>
             </tr>
         </table>
         <br><br>
         <label for="coursesAppliedFor">COURSES APPLIED FOR</label>
-            <label for="bca">BCCA</label>
+            <label for="bca">BCA</label>
             <input type="checkbox">
             <label for="b.com">B.Com</label>
             <input type="checkbox">
