@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT REGISTRATION FORM</title>
+</head>
+<body>
+    <h1>STUDENT REGISTRATION FORM</h1>
+    <form action="connect.php" method="POST">
+        <label for="firstName">FIRST NAME</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+        <label for="lastName">LAST NAME</label>
+        <input type="text" id="lastName" name="lastName"><br><br>
+        <label for="dateOfBirth">DATE OF BIRTH</label>
+        <select name="dayOfBirth" id="dayOfBirth" required>
+            <option value="" disabled selected>Day:</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            <!-- Add more options as needed -->
+        </select>
+        <select name="monthOfBirth" id="monthOfBirth" required>
+            <option value="" disabled selected>Month:</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+        <select name="yearOfBirth" id="yearOfBirth" required>
+            <option value="" disabled selected>Year:</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+        </select>
+        <br>
+        <br>
+        <label for="emailID">EMAIL ID</label>
+        <input type="email" id="emailID" name="emailID" required><br><br>
+        <br>
+        <br>
+        <label for="mobileNumber">MOBILE NUMBER</label>
+        <input type="tel" id="mobileNumber" name="mobileNumber"><br><br>
+        <label for="gender">GENDER</label>
+        <input type="radio" id="gender_male" name="gender" value="male"> <label for="gender_male">Male</label>
+        <input type="radio" id="gender_female" name="gender" value="female"> <label for="gender_female">Female</label>
+        <br><br>
+        <label for="address">ADDRESS</label>
+        <textarea name="address" id="address"></textarea><br><br>
+        <label for="city">CITY</label>
+        <input type="text" id="city" name="city"><br><br>
+        <label for="pinCode">PIN CODE</label>
+        <input type="text" id="pinCode" name="pinCode"><br><br>
+        <label for="state">STATE</label>
+        <input type="text" id="state" name="state"><br><br>
+        <label for="country">COUNTRY</label>
+<select id="country" name="country" required>
+    <option value="">Select Country</option>
+    <option value="Rwanda">Rwanda</option>
+    <option value="Kenya">Kenya</option>
+    <option value="Uganda">Uganda</option>
+    <option value="Tanzania">Tanzania</option>
+    <option value="India">India</option>
+    <option value="USA">USA</option>
+    <option value="UK">United Kingdom</option>
+</select>
+<br><br>
+        <label for="hobbies">HOBBIES</label>
+        <label for="hobby1">Drawing</label>
+        <input type="checkbox" id="hobby1" name="hobbies[]" value="drawing">
+        <label for="hobby2">Singing</label>
+        <input type="checkbox" id="hobby2" name="hobbies[]" value="singing">
+        <label for="hobby3">Dancing</label>
+        <input type="checkbox" id="hobby3" name="hobbies[]" value="Dancing">
+        <label for="hobby4">Sketching</label>
+        <input type="checkbox" id="hobby4" name="hobbies[]" value="Sketching">
+        <label for="others">Others</label>
+        <input type="checkbox" id="others" name="hobbies[]" value="others">
+        <input type="text" id="otherHobby" name="otherHobby">
+        <br><br>
+        <label for="qualifications">QUALIFICATIONS</label>
+        <table>
+            <tr>
+                <th>SI.No.</th>
+                <th>Examination</th>
+                <th>Board<br><small>(10 char max)</small></th>
+                <th>Percentage<br><small>(upto 2 decimal)</small></th>
+                <th>Year of Passing</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><strong>Class X</strong></td>
+                <td><input type="text" name="board1" required></td>
+                <td><input type="text" name="percentage1"></td>
+                <td><input type="text" name="yearOfPassing1"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>Class XII</strong></td>
+                <td><input type="text" name="board2" required></td>
+                <td><input type="text" name="percentage2"></td>
+                <td><input type="text" name="yearOfPassing2" required></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>Graduation</strong></td>
+                <td><input type="text" name="board3" required></td>
+                <td><input type="text" name="percentage3"></td>
+                <td><input type="text" name="yearOfPassing3"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>Masters</strong></td>
+                <td><input type="text" name="board4" required></td>
+                <td><input type="text" name="percentage4"></td>
+                <td><input type="text" name="yearOfPassing4"></td>
+            </tr>
+        </table>
+        <br><br>
+        <label for="coursesAppliedFor">COURSES APPLIED FOR</label>
+            <label for="bca">BCA</label>
+            <input type="checkbox" id="bca" name="courses[]" value="BCA">
+            <label for="bcom">B.Com</label>
+            <input type="checkbox" id="bcom" name="courses[]" value="B.Com">
+            <label for="bsc">B.Sc</label>
+            <input type="checkbox" id="bsc" name="courses[]" value="B.Sc">
+            <label for="ba">B.A</label>
+            <input type="checkbox" id="ba" name="courses[]" value="B.A">
+
+        <br><br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+        <hr>
+</body>
+</html>
